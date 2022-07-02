@@ -1,0 +1,12 @@
+D:\C# file\Ass01Solution\BussinessObject\bin\Debug\net6.0\BussinessObject.deps.json
+D:\C# file\Ass01Solution\BussinessObject\bin\Debug\net6.0\BussinessObject.dll
+D:\C# file\Ass01Solution\BussinessObject\bin\Debug\net6.0\BussinessObject.pdb
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.csproj.AssemblyReference.cache
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.AssemblyInfoInputs.cache
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.AssemblyInfo.cs
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.csproj.CoreCompileInputs.cache
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.dll
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\refint\BussinessObject.dll
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\BussinessObject.pdb
+D:\C# file\Ass01Solution\BussinessObject\obj\Debug\net6.0\ref\BussinessObject.dll
