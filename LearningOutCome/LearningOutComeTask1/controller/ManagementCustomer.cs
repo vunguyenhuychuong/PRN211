@@ -18,7 +18,7 @@ namespace LearningOutComeTask1.Controller
         
 
         private float sumCustomerLocal = 0, sumCustomerForeigner = 0;
-        private double totalBill;
+        private double Count;
         private double avergradeTotalBill;
         private int count;
         //private float ;
@@ -56,7 +56,7 @@ namespace LearningOutComeTask1.Controller
                     sumCustomerLocal += listCustomerLocal.quantity;
 
                     customersList[count] = listCustomerLocal;
-                    //count++;
+                    
                 }
                 else
                 {
@@ -67,8 +67,10 @@ namespace LearningOutComeTask1.Controller
                     sumCustomerForeigner += listcustomerForeigner.quantity;
 
                     customersList[count] = listcustomerForeigner;
-                    //count++;
+                    
                 }
+                Count++;
+                count++;
             }
         }
 
@@ -90,9 +92,9 @@ namespace LearningOutComeTask1.Controller
 
         public void AveragePriceFromCustomerAbove()
         {
-            double TotalAmount = (listCustomerLocal.totalBill) / 2;
-            avergradeTotalBill = TotalAmount;
-            Console.WriteLine("The average of total bill for foreginer Customer: " + avergradeTotalBill);
+            //double TotalAmount = () ;
+            //avergradeTotalBill = TotalAmount;
+            Console.WriteLine("The average of total bill for foreginer Customer: " + (avergradeTotalBill/Count));
         }
 
     }

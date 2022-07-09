@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace LearningOutComeTask1.dto
@@ -44,8 +45,8 @@ namespace LearningOutComeTask1.dto
                 try
                 {
                     count = 0;
-                    String pattern = @"^[0-9]+\s+([a-Za-Z]+[a-Za-Z]+\s[a-ZA-Z]+)$";
-                    Console.Write("\nInput ID: ");
+                    String pattern = "^[A-Z._%+-]+@[A-Z.-]+\\.A[A-Z]{}$";
+                    Console.Write("\nInput CustomerID: ");
                     this.customerID = int.Parse(Console.ReadLine());
                     if (this.customerID.Equals(pattern))
                     {
@@ -64,90 +65,98 @@ namespace LearningOutComeTask1.dto
             {
                 try
                 {
-                    Console.Write("\nInput Name: ");
-                    customerName = Console.ReadLine();
-                    if (customerName == null && customerName.Length < 0)
+                    count = 0;
+                    String pattern = "[0-9]";
+                    Console.Write("$\nInput CustomerName: ");
+                    this.customerName = Console.ReadLine();
+                    if (Regex.IsMatch(this.customerName, pattern))
                     {
-                        Console.Write("Please Custumer Name is not Empty!");
+                        throw new Exception();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.Write(ex.Message);
-
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please input number ");
+                    count++;
                 }
+                Console.ResetColor();
             }while (count != 0);
 
             do
             {
                 try
                 {
-                    Console.Write("\nInput Address: ");
+                    count = 0;
+                    String pattern = "[0-9]";
+                    Console.Write("$\nInput Address: ");
                     Address = Console.ReadLine();
-                    if (Address == null && Address.Length < 0)
+                    if (Regex.IsMatch(this.Address, pattern))
                     {
-                        Console.Write("Please Do not let address empty");
+                        throw new Exception();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.Write(ex.Message);
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("Please input String not number");
                     count++;
                 }
+                Console.ResetColor();
             } while (count != 0);
 
             do
             {
                 try
                 {
-                    Console.Write("\nInput Quantity: ");
+                    count = 0;
+                    String pattern = "^[A-Z._%+-]+@[A-Z.-]+\\.A[A-Z]{}$";
+                    Console.Write("$\nInput Quantity: ");
                     quantity = float.Parse(Console.ReadLine());
-                    if (quantity < 0)
+                    if (this.quantity.Equals(pattern))
                     {
-                        Console.Write("Please Do not let address empty");
+                        throw new Exception();
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.Write(ex.Message);
+                    Console.ForegroundColor= ConsoleColor.Red;
+                    Console.WriteLine("Please input number not character!!");
                     count++;
                 }
+                Console.ResetColor();
             } while (count != 0);
 
             do
             {
                 try
                 {
-                    Console.Write("\nInput Unit Price: ");
+                    count = 0;
+                    String pattern = "^[A-Z._%+-]+@[A-Z.-]+\\.A[A-Z]{}$";
+                    Console.Write("$\nInput Unit Price: ");
                     UnitPrice = float.Parse(Console.ReadLine());
-                    if (quantity < 0)
+                    if (this.UnitPrice.Equals(pattern))
                     {
-                        Console.Write("Please Do not let address empty");
+                        throw new Exception();
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.Write(ex.Message);
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("Please input number not character!!");
                     count++;
                 }
+                Console.ResetColor();
             } while (count != 0);
         }
 
 
-        public override string ToString()
-        {
-            //return "CustomerID" + customerID + "CustomerName" + customerName + "Address" + Address
-            //    + "Quantity" + quantity + "UnitPrice" + UnitPrice; 
-            string obj = $"{customerID}, {customerName}, {Address} , {quantity}, {UnitPrice}";
-            return obj;
-        }
-        //public void display()
+        //public override string ToString()
         //{
-        //    Console.WriteLine($"customerid : " + customerID);
-        //    Console.WriteLine($"customername : " + customerName);
-        //    Console.WriteLine($"address : " + Address);
-        //    Console.WriteLine($"ammount of consumpt : " + quantity);
-        //    Console.WriteLine($"price : " + UnitPrice);
+        //    //return "CustomerID" + customerID + "CustomerName" + customerName + "Address" + Address
+        //    //    + "Quantity" + quantity + "UnitPrice" + UnitPrice; 
+        //    string obj = $"{customerID}, {customerName}, {Address} , {quantity}, {UnitPrice}";
+        //    return obj;
         //}
 
     }

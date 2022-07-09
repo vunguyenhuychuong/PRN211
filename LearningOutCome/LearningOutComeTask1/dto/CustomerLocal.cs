@@ -38,46 +38,31 @@ namespace LearningOutComeTask1.DTO
             {
                 try
                 {
-                    //String pattern = "[0-9]";
+                    count = 0;
+                    String pattern = "[0-9]";
                     Console.Write($"\nInput Type (Bussiness, Saler, Teacher,Employee): ");
                     this.typeCustomer = Console.ReadLine();
-                    //if (Regex.IsMatch(this.typeCustomer, pattern))
-                    //{
-                    //    throw new Exception();
-                    //}
-                    //if (!Regex.IsMatch(this.typeCustomer, "Bussiness"))
-                    //{
-                    //    Console.WriteLine("Please input 1/4 type (Bussiness,Saler,Teacher, Employee)");
-                    //    count++;
-                    //}
-                    //if (!Regex.IsMatch(this.typeCustomer, "Saler"))
-                    //{
-                    //    Console.WriteLine("Please input 1/4 type (Bussiness,Saler,Teacher, Employee)");
-                    //    count++;
-                    //}
-                    //if (!Regex.IsMatch(this.typeCustomer, "Teacher"))
-                    //{
-                    //    Console.WriteLine("Please input 1/4 type (Bussiness,Saler,Teacher, Employee)");
-                    //    count++;
-                    //}
-                    //if (!Regex.IsMatch(this.typeCustomer, "Employee"))
-                    //{
-                    //    Console.WriteLine("Please input 1/4 type (Bussiness,Saler,Teacher, Employee)");
-                    //    count++;
-                    //}
+                    String typeCutomer = this.typeCustomer;
+                    if (Regex.IsMatch(typeCutomer, pattern))
+                    {
+                        throw new Exception();
+                    }
+                   
                 }
                 catch(Exception ex)
-                {
+                {   
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Dont type a number");
                     count++;
                 }
+                Console.ResetColor();
             }while(count != 0);
 
             do
             {
                 try
                 {
-                    
+                    count = 0;
                     String pattern = "[0-9]";
                     Console.Write("$\nInput Quota: ");
                     this.quota = float.Parse(Console.ReadLine());
@@ -87,10 +72,12 @@ namespace LearningOutComeTask1.DTO
                     }            
                 }
                 catch (Exception)
-                {
+                {   
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Please input number ,not character!!");
                     count++;
                 }
+                Console.ResetColor();
             } while (count != 0);
 
             if(quantity <= quota)
