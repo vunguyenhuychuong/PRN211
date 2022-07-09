@@ -27,24 +27,27 @@ namespace LearningOutComeTask1.DTO
         public void InputCustomerForeigner()
         {
             base.InputCustomer();
-
-            while (true)
+            int count = 0;
+            do
             {
                 try
                 {
-                    int count = 0;
+                    count = 0;
                     String pattern = "[0-9]";
                     Console.Write($"Input Nation: ");
                     this.nation = Console.ReadLine();
-                    if(Regex.IsMatch(this.nation, pattern))
+                    if (Regex.IsMatch(this.nation, pattern))
                     {
                         throw new Exception();
                     }
-                }catch(Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
                 }
-            }
+                catch (Exception)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Please input Characters not number!");
+                    count++;
+                }
+            } while (count != 0);
 
             this.totalBill = quantity * UnitPrice;
 
@@ -59,7 +62,7 @@ namespace LearningOutComeTask1.DTO
                 $"Quantity: {this.quantity}," + " ," +
                 $"UnitPrice: {this.UnitPrice}," + " ," +
                 $"Nation: {this.nation}," + " ," +
-                $"TotalBill: {this.totalBill}]";
+                $"TotalBill: {this.totalBill}";
             return obj;
         }
 

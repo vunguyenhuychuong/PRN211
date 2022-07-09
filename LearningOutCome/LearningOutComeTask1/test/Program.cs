@@ -29,8 +29,8 @@ namespace LearningOutComeTask1.Test
                     try
                     {
                         count = 0;
-                        String pattern = "[a-z]+";
-                        Console.Write("     Select your choice:     ");
+                        String pattern = "^[A-Z._%+-]+@[A-Z.-]+\\.A[A-Z]{}$";
+                        Console.Write("==========Select your choice:     ");
                         choice = Convert.ToInt32(Console.ReadLine());
                         if (choice.Equals(pattern))
                         {

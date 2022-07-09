@@ -81,6 +81,10 @@ namespace LearningOutComeTask1.Controller
                 Console.WriteLine(customer.ToString());
                 Console.ReadLine();
             }
+            if(customersList == null)
+            {
+                Console.WriteLine("The list is empty!!");
+            }
         }
 
         public void TotalAmountOfConsumption()
