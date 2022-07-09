@@ -1,0 +1,15 @@
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\bin\Debug\net6.0\LearningOutComeTask1.exe
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\bin\Debug\net6.0\LearningOutComeTask1.deps.json
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\bin\Debug\net6.0\LearningOutComeTask1.runtimeconfig.json
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\bin\Debug\net6.0\LearningOutComeTask1.dll
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\bin\Debug\net6.0\LearningOutComeTask1.pdb
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.AssemblyInfo.cs
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.dll
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\refint\LearningOutComeTask1.dll
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.pdb
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\LearningOutComeTask1.genruntimeconfig.cache
+C:\Users\DELL\Desktop\LO1-LO2\PRN211\LearningOutCome\LearningOutComeTask1\obj\Debug\net6.0\ref\LearningOutComeTask1.dll
