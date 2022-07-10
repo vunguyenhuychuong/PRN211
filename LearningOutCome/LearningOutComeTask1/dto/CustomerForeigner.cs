@@ -53,17 +53,6 @@ namespace LearningOutComeTask1.DTO
 
         }
 
-        //public override string ToString()
-        //{
-        //    return $"CustomerID: {this.customerID}" + " ," +
-        //        $"CustomerName :{this.customerName}," + " ," +
-        //        $"Address: {this.Address}," + " ," +
-        //        $"Quantity: {this.quantity}," + " ," +
-        //        $"UnitPrice: {this.UnitPrice}," + " ," +
-        //        $"Nation: {this.nation}," + " ," +
-        //        $"TotalBill: {this.totalBill}";
-
-        //}
         public void DisplayCustomerAbove()
         {
             Console.WriteLine("CustomerID: " + customerID + "," +

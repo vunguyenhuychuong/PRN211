@@ -91,18 +91,6 @@ namespace LearningOutComeTask1.DTO
             }
         }
 
-        //public override string ToString()
-        //{
-        //    return  $"CustomerID: {this.customerID}" + " ," +
-        //        $"CustomerName :{this.customerName}," + " ," +
-        //        $"Address: {this.Address}," + " ," +
-        //        $"Quantity: {this.quantity}," + " ," +
-        //        $"UnitPrice: {this.UnitPrice}," + " ," +
-        //        $"TypeCustomer: {this.typeCustomer}," + " ,"  +
-        //        $"Quota: {this.quota}," + " ," +
-        //        $"TotalBill: {this.totalBill}]";         
-        //}
-
         public void DisplayCustomerLocal()
         {
             Console.WriteLine("CustomerID: " + customerID + "," + 

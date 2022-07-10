@@ -75,19 +75,14 @@ namespace LearningOutComeTask1.Controller
             }
         }
 
-        //public void ShowListLocal()
-        //{
-
-        //    foreach (Customer customer in customersList)
-        //    {
-        //        Console.WriteLine(customer.ToString());
-        //        Console.ReadKey();
-        //    }
-            
-        //}
-
         public void showListCustomerAll()
         {
+            if(count == 0)
+            {
+                Console.WriteLine("No data");
+            }
+            else
+            {
                 for (int i = 0; i < count; i++)
                 {
                     Console.WriteLine("  Number of the List Bill {0}", i + 1);
@@ -101,7 +96,9 @@ namespace LearningOutComeTask1.Controller
                         listcustomerForeigner = (CustomerForeigner)customersList[i];
                         listcustomerForeigner.DisplayCustomerAbove();
                     }
-                }          
+                }
+                Console.ReadKey();
+            }          
         }
         public void TotalAmountOfConsumption()
         {
@@ -122,9 +119,7 @@ namespace LearningOutComeTask1.Controller
             else
             {
                 Console.WriteLine("No data load!");
-            }
-            
+            }           
         }
-
     }
 }
