@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -149,15 +149,6 @@ namespace LearningOutComeTask1.dto
                 Console.ResetColor();
             } while (count != 0);
         }
-
-
-        //public override string ToString()
-        //{
-        //    //return "CustomerID" + customerID + "CustomerName" + customerName + "Address" + Address
-        //    //    + "Quantity" + quantity + "UnitPrice" + UnitPrice; 
-        //    string obj = $"{customerID}, {customerName}, {Address} , {quantity}, {UnitPrice}";
-        //    return obj;
-        //}
 
     }
 }

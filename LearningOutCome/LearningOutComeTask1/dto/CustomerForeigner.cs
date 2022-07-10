@@ -34,7 +34,7 @@ namespace LearningOutComeTask1.DTO
                 {
                     count = 0;
                     String pattern = "[0-9]";
-                    Console.Write($"Input Nation: ");
+                    Console.Write("\nInput Nation: ");
                     this.nation = Console.ReadLine();
                     if (Regex.IsMatch(this.nation, pattern))
                     {
@@ -53,17 +53,26 @@ namespace LearningOutComeTask1.DTO
 
         }
 
-        public override string ToString()
+        //public override string ToString()
+        //{
+        //    return $"CustomerID: {this.customerID}" + " ," +
+        //        $"CustomerName :{this.customerName}," + " ," +
+        //        $"Address: {this.Address}," + " ," +
+        //        $"Quantity: {this.quantity}," + " ," +
+        //        $"UnitPrice: {this.UnitPrice}," + " ," +
+        //        $"Nation: {this.nation}," + " ," +
+        //        $"TotalBill: {this.totalBill}";
+
+        //}
+        public void DisplayCustomerAbove()
         {
-            base.ToString();
-            string obj = $"CustomerID: {this.customerID}" + " ," +
-                $"CustomerName :{this.customerName}," + " ," +
-                $"Address: {this.Address}," + " ," +
-                $"Quantity: {this.quantity}," + " ," +
-                $"UnitPrice: {this.UnitPrice}," + " ," +
-                $"Nation: {this.nation}," + " ," +
-                $"TotalBill: {this.totalBill}";
-            return obj;
+            Console.WriteLine("CustomerID: " + customerID + "," +
+                              "CustomerName: " + customerName + "," +
+                              "Address: " + Address + "," +
+                              "Quantity: " + quantity + "," +
+                              "UnitPrice: " + UnitPrice + "," +
+                              "Nationality: " + nation + "," +
+                              "TotalBill: " + totalBill);
         }
 
     }

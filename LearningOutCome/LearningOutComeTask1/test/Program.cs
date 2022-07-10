@@ -58,6 +58,8 @@ namespace LearningOutComeTask1.Test
                                 case 1:
                                     List.InputCustomerList(1);
                                     break;
+                                case 2:
+                                    break;
                             }
                         } while (choice1 == 1);
                         break;
@@ -80,20 +82,7 @@ namespace LearningOutComeTask1.Test
                         break;
                     case 3:
                         Console.Clear();
-                        int choice3;
-                        do
-                        {
-                            Console.WriteLine("Input the local customer");
-                            Console.WriteLine("1. Show List Bills of Customer ");
-                            Console.WriteLine("2. Exit");
-                            choice3= Convert.ToInt32(Console.ReadLine());
-                            switch (choice3)
-                            {
-                                case 1:
-                                    List.ShowListLocal();
-                                    break;
-                            }
-                        } while (choice3 == 1);
+                        List.showListCustomerAll();
                         break;
                     case 4:
                         Console.Clear();

@@ -18,8 +18,9 @@ namespace LearningOutComeTask1.Controller
         
 
         private float sumCustomerLocal = 0, sumCustomerForeigner = 0;
-        private double Count;
+        private double quantity;
         private double avergradeTotalBill;
+        private double totalBill;
         private int count;
         //private float ;
 
@@ -69,36 +70,60 @@ namespace LearningOutComeTask1.Controller
                     customersList[count] = listcustomerForeigner;
                     
                 }
-                Count++;
+                quantity++;
                 count++;
             }
         }
 
-        public void ShowListLocal()
-        {
-            foreach (Customer customer in customersList)
-            {
-                Console.WriteLine(customer.ToString());
-                Console.ReadLine();
-            }
-            if(customersList == null)
-            {
-                Console.WriteLine("The list is empty!!");
-            }
-        }
+        //public void ShowListLocal()
+        //{
 
+        //    foreach (Customer customer in customersList)
+        //    {
+        //        Console.WriteLine(customer.ToString());
+        //        Console.ReadKey();
+        //    }
+            
+        //}
+
+        public void showListCustomerAll()
+        {
+                for (int i = 0; i < count; i++)
+                {
+                    Console.WriteLine("  Number of the List Bill {0}", i + 1);
+                    if (customersList[i].GetType() == typeof(CustomerLocal))
+                    {
+                        listCustomerLocal = (CustomerLocal)customersList[i];
+                        listCustomerLocal.DisplayCustomerLocal();
+                    }
+                    else
+                    {
+                        listcustomerForeigner = (CustomerForeigner)customersList[i];
+                        listcustomerForeigner.DisplayCustomerAbove();
+                    }
+                }          
+        }
         public void TotalAmountOfConsumption()
-       {
+        {
             Console.WriteLine("$==============> Total amount of comsumption LocalCustomer: " + sumCustomerLocal);
             Console.WriteLine("$==============> Total amount of consumption ForeignerCustomer: " + sumCustomerForeigner);
             Console.ReadLine();
-       }
+        }
 
         public void AveragePriceFromCustomerAbove()
         {
-            //double TotalAmount = () ;
-            //avergradeTotalBill = TotalAmount;
-            Console.WriteLine("The average of total bill for foreginer Customer: " + (avergradeTotalBill/Count));
+            if(listcustomerForeigner.customerID != 0)
+            {
+                double TotalAmount = (listcustomerForeigner.totalBill / quantity);
+                avergradeTotalBill = TotalAmount;
+                Console.WriteLine("The average of total bill for foreginer Customer: " + TotalAmount);
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("No data load!");
+            }
+            
         }
 
     }

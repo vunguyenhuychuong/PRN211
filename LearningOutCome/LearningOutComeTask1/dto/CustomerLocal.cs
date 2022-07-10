@@ -47,12 +47,13 @@ namespace LearningOutComeTask1.DTO
                     {
                         throw new Exception();
                     }
+                    
                    
                 }
                 catch(Exception ex)
                 {   
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Dont type a number");
+                    Console.WriteLine("Dont type a number and type correct (Bussiness,Saler, Teah");
                     count++;
                 }
                 Console.ResetColor();
@@ -69,7 +70,7 @@ namespace LearningOutComeTask1.DTO
                     if (this.quota.Equals(pattern))
                     {
                         throw new Exception();
-                    }            
+                    }           
                 }
                 catch (Exception)
                 {   
@@ -90,18 +91,28 @@ namespace LearningOutComeTask1.DTO
             }
         }
 
-        public override string ToString()
+        //public override string ToString()
+        //{
+        //    return  $"CustomerID: {this.customerID}" + " ," +
+        //        $"CustomerName :{this.customerName}," + " ," +
+        //        $"Address: {this.Address}," + " ," +
+        //        $"Quantity: {this.quantity}," + " ," +
+        //        $"UnitPrice: {this.UnitPrice}," + " ," +
+        //        $"TypeCustomer: {this.typeCustomer}," + " ,"  +
+        //        $"Quota: {this.quota}," + " ," +
+        //        $"TotalBill: {this.totalBill}]";         
+        //}
+
+        public void DisplayCustomerLocal()
         {
-            base.ToString();
-            string obj = $"CustomerID: {this.customerID}" + " ," +
-                $"CustomerName :{this.customerName}," + " ," +
-                $"Address: {this.Address}," + " ," +
-                $"Quantity: {this.quantity}," + " ," +
-                $"UnitPrice: {this.UnitPrice}," + " ," +
-                $"TypeCustomer: {this.typeCustomer}," + " ,"  +
-                $"Quota: {this.quota}," + " ," +
-                $"TotalBill: {this.totalBill}]";
-            return obj;
+            Console.WriteLine("CustomerID: " + customerID + "," + 
+                              "CustomerName: " + customerName + "," +
+                              "Address: " + Address + "," +
+                              "Quantity: " + quantity + "," +
+                              "UnitPrice: " + UnitPrice + "," + 
+                              "TypeCustomer: " + typeCustomer + "," + 
+                              "Quota: " + quota + "," + 
+                              "TotalBill: " + totalBill);
         }
     }
 }
