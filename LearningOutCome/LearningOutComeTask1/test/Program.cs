@@ -82,7 +82,20 @@ namespace LearningOutComeTask1.Test
                         break;
                     case 3:
                         Console.Clear();
-                        List.showListCustomerAll();
+                        int choice3;
+                        do
+                        {
+                            Console.WriteLine("Input the foreigner customer");
+                            Console.WriteLine("1. Show list the bill of customer");
+                            Console.WriteLine("2. Exit");
+                            choice3 = Convert.ToInt32(Console.ReadLine());
+                            switch (choice3)
+                            {
+                                case 1:
+                                    List.showListCustomerAll();
+                                    break;
+                            }
+                        } while (choice3 == 1);                        
                         break;
                     case 4:
                         Console.Clear();
@@ -102,20 +115,8 @@ namespace LearningOutComeTask1.Test
                         } while (choice4 == 1);
                         break;
                     case 5:
-                        int choice5;
-                        do
-                        {
-                            Console.WriteLine("Input the local customer");
-                            Console.WriteLine("1. Average costs of customer from Above ");
-                            Console.WriteLine("2. Exit");
-                            choice5 = Convert.ToInt32(Console.ReadLine());
-                            switch (choice5)
-                            {
-                                case 1:
-                                    List.AveragePriceFromCustomerAbove();
-                                    break;
-                            }
-                        } while (choice5 == 1);
+                        
+                        List.AveragePriceFromCustomerAbove();
                         Console.Clear();
                         break;
                 }

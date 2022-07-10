@@ -48,9 +48,10 @@ namespace LearningOutComeTask1.DTO
                     count++;
                 }
             } while (count != 0);
-
-            this.totalBill = quantity * UnitPrice;
-
+        }
+        public double TTien()
+        {
+            return this.totalBill = quantity * UnitPrice;
         }
 
         public void DisplayCustomerAbove()
