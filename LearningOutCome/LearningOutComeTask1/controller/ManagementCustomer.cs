@@ -15,24 +15,17 @@ namespace LearningOutComeTask1.Controller
         Customer[] customersList = new Customer[100];
         private CustomerLocal listCustomerLocal;
         private CustomerForeigner? listcustomerForeigner;
-        
-
         private float sumCustomerLocal = 0, sumCustomerForeigner = 0;
-        private double quantity;
-        private double avergradeTotalBill;
-        private double totalBill;
-        private int count;
-        //private float ;
+        private double SumTien = 0;
+        private int countKh;
+        private double dem = 0;
 
 
-       
+
 
         public ManagementCustomer()
         {
-            count = 0;
-            sumCustomerForeigner = 0;
-            sumCustomerLocal = 0;
-            avergradeTotalBill = 0;
+            countKh = 0;
             for(int i = 0; i < customersList.Length; i++)
             {
                 customersList[i] = new Customer();
@@ -42,7 +35,7 @@ namespace LearningOutComeTask1.Controller
 
         public void InputCustomerList(byte check)
         {
-            if(count > 100)
+            if(countKh > 100)
             {
                 Console.WriteLine("Full Memory!!");
             }
@@ -50,40 +43,42 @@ namespace LearningOutComeTask1.Controller
             {
                 if(check == 1)
                 {
-                    customersList[count] = new CustomerLocal();
+                    customersList[countKh] = new CustomerLocal();
                     listCustomerLocal = new CustomerLocal();
                     
                     listCustomerLocal.InputCustomerLocal();
+                    listCustomerLocal.TotalBill = listCustomerLocal.TTien();
+                    customersList[countKh] = listCustomerLocal;
                     sumCustomerLocal += listCustomerLocal.quantity;
 
-                    customersList[count] = listCustomerLocal;
+                   
                     
                 }
                 else
                 {
-                    customersList[count] = new CustomerForeigner();
+                    customersList[countKh] = new CustomerForeigner();
                     listcustomerForeigner = new CustomerForeigner();
 
                     listcustomerForeigner.InputCustomerForeigner();
+                    listcustomerForeigner.totalBill=listcustomerForeigner.TTien();
+                    customersList[countKh] = listcustomerForeigner;
                     sumCustomerForeigner += listcustomerForeigner.quantity;
-
-                    customersList[count] = listcustomerForeigner;
-                    
+                    SumTien += listcustomerForeigner.totalBill;                  
                 }
-                quantity++;
-                count++;
+                dem++;
+                countKh++;
             }
         }
 
         public void showListCustomerAll()
         {
-            if(count == 0)
+            if(countKh == 0)
             {
                 Console.WriteLine("No data");
             }
             else
             {
-                for (int i = 0; i < count; i++)
+                for (int i = 0; i < countKh; i++)
                 {
                     Console.WriteLine("  Number of the List Bill {0}", i + 1);
                     if (customersList[i].GetType() == typeof(CustomerLocal))
@@ -102,8 +97,8 @@ namespace LearningOutComeTask1.Controller
         }
         public void TotalAmountOfConsumption()
         {
-            Console.WriteLine("$==============> Total amount of comsumption LocalCustomer: " + sumCustomerLocal);
-            Console.WriteLine("$==============> Total amount of consumption ForeignerCustomer: " + sumCustomerForeigner);
+            Console.WriteLine("$==============> Total amount of comsumption LocalCustomer: " + sumCustomerLocal + "KW");
+            Console.WriteLine("$==============> Total amount of consumption ForeignerCustomer: " + sumCustomerForeigner + "KW");
             Console.ReadLine();
         }
 
@@ -111,9 +106,9 @@ namespace LearningOutComeTask1.Controller
         {
             if(listcustomerForeigner.customerID != 0)
             {
-                double TotalAmount = (listcustomerForeigner.totalBill / quantity);
-                avergradeTotalBill = TotalAmount;
-                Console.WriteLine("The average of total bill for foreginer Customer: " + TotalAmount);
+                //double TotalAmount = (listcustomerForeigner.totalBill / SumTien);
+                //avergradeTotalBill = TotalAmount;
+                Console.WriteLine("The average of total bill for foreginer Customer: " + SumTien/dem);
                 Console.ReadKey();
             }
             else

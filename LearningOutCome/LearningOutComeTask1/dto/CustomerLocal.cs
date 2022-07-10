@@ -17,6 +17,7 @@ namespace LearningOutComeTask1.DTO
         public float quota { get; set; }
 
         public double totalBill { get; set; }
+        public double TotalBill { get; internal set; }
 
         public CustomerLocal()
         {
@@ -81,13 +82,18 @@ namespace LearningOutComeTask1.DTO
                 Console.ResetColor();
             } while (count != 0);
 
-            if(quantity <= quota)
+           
+            
+        }
+        public double TTien()
+        {
+            if (quantity <= quota)
             {
-                this.totalBill = quantity * UnitPrice;
+                return totalBill = quantity * UnitPrice;
             }
             else
             {
-                this.totalBill = quantity * UnitPrice * quota * (quantity + quota) + UnitPrice * 2.5;
+                return totalBill = quantity * UnitPrice * quota + (quantity - quota) * UnitPrice * 2.5;
             }
         }
 
