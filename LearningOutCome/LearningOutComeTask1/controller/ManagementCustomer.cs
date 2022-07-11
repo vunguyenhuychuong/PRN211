@@ -47,12 +47,9 @@ namespace LearningOutComeTask1.Controller
                     listCustomerLocal = new CustomerLocal();
                     
                     listCustomerLocal.InputCustomerLocal();
-                    listCustomerLocal.TotalBill = listCustomerLocal.TTien();
+                    listCustomerLocal.totalBill = listCustomerLocal.TTien();
                     customersList[countKh] = listCustomerLocal;
-                    sumCustomerLocal += listCustomerLocal.quantity;
-
-                   
-                    
+                    sumCustomerLocal += listCustomerLocal.quantity;                    
                 }
                 else
                 {
@@ -106,8 +103,6 @@ namespace LearningOutComeTask1.Controller
         {
             if(listcustomerForeigner.customerID != 0)
             {
-                //double TotalAmount = (listcustomerForeigner.totalBill / SumTien);
-                //avergradeTotalBill = TotalAmount;
                 Console.WriteLine("The average of total bill for foreginer Customer: " + SumTien/dem);
                 Console.ReadKey();
             }
