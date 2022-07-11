@@ -17,7 +17,6 @@ namespace LearningOutComeTask1.DTO
         public float quota { get; set; }
 
         public double totalBill { get; set; }
-        public double TotalBill { get; internal set; }
 
         public CustomerLocal()
         {
@@ -47,9 +46,7 @@ namespace LearningOutComeTask1.DTO
                     if (Regex.IsMatch(typeCutomer, pattern))
                     {
                         throw new Exception();
-                    }
-                    
-                   
+                    }                   
                 }
                 catch(Exception ex)
                 {   
@@ -80,10 +77,7 @@ namespace LearningOutComeTask1.DTO
                     count++;
                 }
                 Console.ResetColor();
-            } while (count != 0);
-
-           
-            
+            } while (count != 0);                 
         }
         public double TTien()
         {

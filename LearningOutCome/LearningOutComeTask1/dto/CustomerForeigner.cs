@@ -64,6 +64,5 @@ namespace LearningOutComeTask1.DTO
                               "Nationality: " + nation + "," +
                               "TotalBill: " + totalBill);
         }
-
     }
 }

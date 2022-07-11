@@ -149,6 +149,5 @@ namespace LearningOutComeTask1.dto
                 Console.ResetColor();
             } while (count != 0);
         }
-
     }
 }
