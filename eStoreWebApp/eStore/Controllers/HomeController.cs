@@ -1,4 +1,5 @@
-﻿using eStore.Models;
+﻿using BussinessObject.Models;
+using eStore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -13,9 +14,12 @@ namespace eStore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly SalesManagementDBContext _context;
+
+        public HomeController(ILogger<HomeController> logger, SalesManagementDBContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
         public IActionResult Index()
@@ -25,6 +29,7 @@ namespace eStore.Controllers
 
         public IActionResult Privacy()
         {
+            HttpContext.Session.Clear();
             return View();
         }
 
@@ -32,6 +37,11 @@ namespace eStore.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
