@@ -1,5 +1,7 @@
+using BussinessObject.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,7 +24,13 @@ namespace eStore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession(options => { options.IdleTimeout = TimeSpan.FromMinutes(30); });
             services.AddControllersWithViews();
+            services.AddHttpContextAccessor();
+            services.AddDirectoryBrowser();
+            services.AddControllersWithViews();
+            services.AddDbContext<SalesManagementDBContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("PostDB")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
